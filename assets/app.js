@@ -94,7 +94,7 @@
         qr('hero__qr', C.links.social.label) +
         '<a class="hero__handle" href="' + esc(C.links.social.url) + '" target="_blank" rel="noopener">' + icon('insta') + esc(C.links.social.label) + '</a>' +
         img(m.peekLeft, '', 'hero__peek hero__peek--l', true) + img(m.peekRight, '', 'hero__peek hero__peek--r', true) +
-        img(m.person, 'Диас выглядывает из-за газеты', 'hero__person', true) +
+        img(m.person, m.personAlt || '', 'hero__person', true) +
         '<svg class="hero__heart" viewBox="0 0 40 44" aria-hidden="true"><path d="M6 0h28a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6H24l-4 8-4-8H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z" fill="#ef3b45"/><path d="M14.5 26.5l-5-5a4 4 0 0 1 5.6-5.6l.9.9.9-.9a4 4 0 0 1 5.6 5.6z" fill="#fff" transform="translate(-1 -3)"/><text x="29" y="24" font-family="Inter,sans-serif" font-weight="600" font-size="13" fill="#fff" text-anchor="middle">1</text></svg>' +
         img(m.objTop, '', 'hero__obj-top', true) +
         img(m.newspaper, 'Газета с заголовком Lost in translation', 'hero__paper', true) +
