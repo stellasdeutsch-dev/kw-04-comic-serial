@@ -3,7 +3,7 @@
 Копия вёрстки Behance «Landing-сериал». Тема-заглушка: три ситуации в поездке и фразы. Две вариации в одном дизайне: `/en/` (английский, реклама Dias English) и `/tr/` (турецкий, реклама Alterna Timur). Подход рекламы сайта 04: мини-тест «С чего тебе начать».
 
 - `gh/` публикуется на GitHub Pages: `gh/en/` и `gh/tr/`, обе с рекламой. Версий без рекламы нет: `/`, `/lesson/` и `/en/lesson/` перенаправляют на `/en/`, а `/tr/lesson/` на `/tr/`.
-- Люди: на `/en/` только Диас, на `/tr/` только Тимур. Источники всех фото в `gh/media/PEOPLE.md`, проверка `python3 qa/people-check.py`. Вырезки: `python3 tools/cutouts.py` (оригинал, cutout, defringe).
+- Люди: на `/en/` только Диас, на `/tr/` только Тимур. Источники всех фото в `gh/media/PEOPLE.md`, проверка `python3 qa/people-check.py`. Людей не вырезаем: только целые фото со своим фоном в рамке. Вырезки предметов: `python3 tools/cutouts.py` (оригинал, cutout, defringe).
 - `content.en.json`, `content.tr.json` тексты и данные вариаций. После правки: `python3 tools/build.py`.
 - `design/` образец: скриншоты владельца и `design/ref/` модули с Behance.
 - `qa/` проверки Playwright и скриншоты.
