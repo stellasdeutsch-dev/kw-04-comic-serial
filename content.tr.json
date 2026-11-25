@@ -16,68 +16,68 @@
   {
    "top": "Аэропорт",
    "bottom": "серия 1",
-   "img": "ep-01",
+   "img": "tr-ep-01",
    "active": true,
    "href": "#ep1"
   },
   {
    "top": "Отель",
    "bottom": "серия 1",
-   "img": "ep-02",
+   "img": "tr-ep-02",
    "active": true,
    "href": "#ep2"
   },
   {
    "top": "Кафе",
    "bottom": "серия 1",
-   "img": "ep-03",
+   "img": "tr-ep-03",
    "active": true,
    "href": "#ep3"
   },
   {
    "top": "Такси",
    "bottom": "скоро",
-   "img": "ep-04"
+   "img": "tr-ep-04"
   },
   {
    "top": "Аптека",
    "bottom": "скоро",
-   "img": "ep-05"
+   "img": "tr-ep-05"
   },
   {
    "top": "Рынок",
    "bottom": "скоро",
-   "img": "ep-06"
+   "img": "tr-ep-06"
   },
   {
    "top": "Банк",
    "bottom": "скоро",
-   "img": "ep-07"
+   "img": "tr-ep-07"
   },
   {
    "top": "Врач",
    "bottom": "скоро",
-   "img": "ep-08"
+   "img": "tr-ep-08"
   },
   {
    "top": "Вокзал",
    "bottom": "скоро",
-   "img": "ep-09"
+   "img": "tr-ep-09"
   },
   {
    "top": "Магазин",
    "bottom": "скоро",
-   "img": "ep-10"
+   "img": "tr-ep-10"
   },
   {
    "top": "Ресторан",
    "bottom": "скоро",
-   "img": "ep-11"
+   "img": "tr-ep-11"
   },
   {
    "top": "Друзья",
    "bottom": "скоро",
-   "img": "ep-12"
+   "img": "tr-ep-12"
   }
  ],
  "tabs": [
@@ -133,10 +133,11 @@
     "bg": "hero-bg",
     "person": "timur-hero",
     "newspaper": "newspaper",
-    "peekLeft": "dias-peek-left",
-    "peekRight": "dias-peek-right",
+    "peekLeft": "tr-peek-left",
+    "peekRight": "tr-peek-right",
     "objTop": "passport",
-    "objBottom": "boarding-pass"
+    "objBottom": "boarding-pass",
+    "personAlt": "Тимур выглядывает из-за газеты"
    }
   },
   {
@@ -150,8 +151,8 @@
     {
      "panels": [
       {
-       "img": "c1-1",
-       "alt": "Тимур идёт по набережной с телефоном",
+       "img": "tr-c1-1",
+       "alt": "Тимур идёт по набережной",
        "grow": 1,
        "bubble": {
         "lang": "en",
@@ -167,7 +168,7 @@
     {
      "panels": [
       {
-       "img": "c1-2",
+       "img": "tr-c1-2",
        "alt": "Тимур в тёмных очках",
        "grow": 36,
        "mark": "?",
@@ -181,8 +182,8 @@
        }
       },
       {
-       "img": "c1-3",
-       "alt": "Диас с другом делают селфи на улице",
+       "img": "tr-c1-3",
+       "alt": "Тимур на набережной",
        "grow": 64,
        "bubble": {
         "lang": "tr",
@@ -198,13 +199,13 @@
     {
      "panels": [
       {
-       "img": "c1-4",
-       "alt": "Тимур у белой стены смотрит в сторону",
+       "img": "tr-c1-4",
+       "alt": "Тимур у белой стены",
        "grow": 34
       },
       {
-       "img": "c1-5",
-       "alt": "Диас у окна с ноутбуком",
+       "img": "tr-c1-5",
+       "alt": "Задание на планшете",
        "grow": 66,
        "caption": {
         "text": "Чемодан не прилетел. Иди к стойке Lost&nbsp;&amp;&nbsp;Found и <b>покажи багажную бирку</b>",
@@ -226,7 +227,7 @@
     {
      "panels": [
       {
-       "img": "c2-1",
+       "img": "tr-c2-1",
        "alt": "Тимур с планшетом, вид через плечо",
        "grow": 33,
        "caption": {
@@ -235,8 +236,8 @@
        }
       },
       {
-       "img": "c2-2",
-       "alt": "Диас ночью у собора Святого Петра",
+       "img": "tr-c2-2",
+       "alt": "Тимур занимается на планшете",
        "grow": 33,
        "bubble": {
         "lang": "en",
@@ -247,8 +248,8 @@
        }
       },
       {
-       "img": "c2-3",
-       "alt": "Диас ночью на набережной",
+       "img": "tr-c2-3",
+       "alt": "Тимур говорит в камеру",
        "grow": 34,
        "bubble": {
         "lang": "tr",
@@ -264,8 +265,8 @@
     {
      "panels": [
       {
-       "img": "c2-4",
-       "alt": "Тимур занимается на планшете",
+       "img": "tr-c2-4",
+       "alt": "Тимур с планшетом",
        "grow": 49,
        "bubble": {
         "lang": "en",
@@ -276,7 +277,7 @@
        }
       },
       {
-       "img": "c2-5",
+       "img": "tr-c2-5",
        "alt": "Тимур у белой стены улыбается",
        "grow": 51,
        "caption": {
@@ -295,12 +296,12 @@
    "alt": "Кирпичный дом ночью в гирляндах, снег и луна",
    "figures": [
     {
-     "img": "silhouette-timur",
+     "img": "tr-silhouette",
      "x": 48,
      "w": 13
     },
     {
-     "img": "silhouette-dias",
+     "img": "tr-silhouette-2",
      "x": 60,
      "w": 10
     }
@@ -329,8 +330,8 @@
     {
      "panels": [
       {
-       "img": "c3-1",
-       "alt": "Диас с чашкой кофе",
+       "img": "tr-c3-1",
+       "alt": "Тимур в зелёном свитере",
        "grow": 48,
        "color": true,
        "caption": {
@@ -339,7 +340,7 @@
        }
       },
       {
-       "img": "c3-2",
+       "img": "tr-c3-2",
        "alt": "Тимур на набережной с пальмами",
        "grow": 52,
        "bubble": {
@@ -356,28 +357,28 @@
     {
      "panels": [
       {
-       "img": "c3-3",
-       "alt": "Пицца на столе в кафе",
-       "grow": 1
-      },
-      {
-       "img": "c3-4",
-       "alt": "Завтрак в кафе",
-       "grow": 1
-      },
-      {
-       "img": "c3-5",
+       "img": "tr-c3-3",
        "alt": "Задание на планшете",
        "grow": 1
       },
       {
-       "img": "c3-6",
-       "alt": "Диас в кафе с напитком",
+       "img": "tr-c3-4",
+       "alt": "Тимур листает урок",
        "grow": 1
       },
       {
-       "img": "c3-7",
-       "alt": "Тимур улыбается на улице",
+       "img": "tr-c3-5",
+       "alt": "Экран планшета",
+       "grow": 1
+      },
+      {
+       "img": "tr-c3-6",
+       "alt": "Тимур у стены",
+       "grow": 1
+      },
+      {
+       "img": "tr-c3-7",
+       "alt": "Тимур в белой рубашке",
        "grow": 1
       }
      ],
@@ -386,8 +387,8 @@
     {
      "panels": [
       {
-       "img": "c3-8",
-       "alt": "Диас за столиком в кафе",
+       "img": "tr-c3-8",
+       "alt": "Тимур читает с планшета",
        "grow": 50,
        "bubble": {
         "lang": "en",
@@ -398,7 +399,7 @@
        }
       },
       {
-       "img": "c3-9",
+       "img": "tr-c3-9",
        "alt": "Тимур у стены с ноутбуком",
        "grow": 50
       }
@@ -408,7 +409,7 @@
     {
      "panels": [
       {
-       "img": "c3-big",
+       "img": "tr-c3-big",
        "alt": "Тимур в тёмных очках на набережной",
        "grow": 1,
        "bubble": {
@@ -438,7 +439,7 @@
    "user": {
     "name": "Ты",
     "sub": "один в поездке",
-    "img": "ep-03"
+    "img": "tr-ep-02"
    },
    "laptop": "laptop"
   },
@@ -449,13 +450,13 @@
    "left": {
     "word": "TÜRK",
     "color": "pink",
-    "img": "strip-roma",
+    "img": "tr-strip-left",
     "href": "buy"
    },
    "right": {
     "word": "TIMUR",
     "color": "green",
-    "img": "strip-palms",
+    "img": "tr-strip-right",
     "href": "buy"
    },
    "labelLeft": "ALTERNA<br>TIMUR",
@@ -470,7 +471,7 @@
     "text": "ПРОЙТИ<br>МИНИ-ТЕСТ",
     "href": "#quiz"
    },
-   "silhouette": "silhouette-timur"
+   "silhouette": "tr-silhouette"
   },
   {
    "type": "paths",
@@ -620,7 +621,7 @@
      "href": "buy"
     },
     {
-     "img": "speaker-you",
+     "img": "tr-speaker-you",
      "name": [
       "ТЫ",
       "В ДОРОГЕ"
@@ -810,7 +811,7 @@
      "price": "30 €",
      "when": "НАВСЕГДА",
      "href": "buy",
-     "silhouette": "silhouette-timur"
+     "silhouette": "tr-silhouette"
     },
     {
      "color": "black",
@@ -871,7 +872,7 @@
     "ЗА НОВЫМИ СЕРИЯМИ"
    ],
    "text": "И подписывайся, если хочешь <b>следующие серии</b> раньше всех: такси, аптека, рынок и ещё <em>девять ситуаций в дороге</em>",
-   "peek": "timur-peek-footer",
+   "peek": "tr-peek-footer",
    "bg": "hero-bg"
   }
  ],

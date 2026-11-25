@@ -15,68 +15,68 @@
   {
    "top": "Аэропорт",
    "bottom": "серия 1",
-   "img": "ep-01",
+   "img": "en-ep-01",
    "active": true,
    "href": "#ep1"
   },
   {
    "top": "Отель",
    "bottom": "серия 1",
-   "img": "ep-02",
+   "img": "en-ep-02",
    "active": true,
    "href": "#ep2"
   },
   {
    "top": "Кафе",
    "bottom": "серия 1",
-   "img": "ep-03",
+   "img": "en-ep-03",
    "active": true,
    "href": "#ep3"
   },
   {
    "top": "Такси",
    "bottom": "скоро",
-   "img": "ep-04"
+   "img": "en-ep-04"
   },
   {
    "top": "Аптека",
    "bottom": "скоро",
-   "img": "ep-05"
+   "img": "en-ep-05"
   },
   {
    "top": "Рынок",
    "bottom": "скоро",
-   "img": "ep-06"
+   "img": "en-ep-06"
   },
   {
    "top": "Банк",
    "bottom": "скоро",
-   "img": "ep-07"
+   "img": "en-ep-07"
   },
   {
    "top": "Врач",
    "bottom": "скоро",
-   "img": "ep-08"
+   "img": "en-ep-08"
   },
   {
    "top": "Вокзал",
    "bottom": "скоро",
-   "img": "ep-09"
+   "img": "en-ep-09"
   },
   {
    "top": "Магазин",
    "bottom": "скоро",
-   "img": "ep-10"
+   "img": "en-ep-10"
   },
   {
    "top": "Ресторан",
    "bottom": "скоро",
-   "img": "ep-11"
+   "img": "en-ep-11"
   },
   {
    "top": "Друзья",
    "bottom": "скоро",
-   "img": "ep-12"
+   "img": "en-ep-12"
   }
  ],
  "tabs": [
@@ -132,10 +132,11 @@
     "bg": "hero-bg",
     "person": "dias-hero",
     "newspaper": "newspaper",
-    "peekLeft": "timur-peek-left",
-    "peekRight": "timur-peek-right",
+    "peekLeft": "en-peek-left",
+    "peekRight": "en-peek-right",
     "objTop": "passport",
-    "objBottom": "boarding-pass"
+    "objBottom": "boarding-pass",
+    "personAlt": "Диас выглядывает из-за газеты"
    }
   },
   {
@@ -149,8 +150,8 @@
     {
      "panels": [
       {
-       "img": "c1-1",
-       "alt": "Тимур идёт по набережной с телефоном",
+       "img": "en-c1-1",
+       "alt": "Диас на смотровой площадке",
        "grow": 1,
        "bubble": {
         "lang": "en",
@@ -166,8 +167,8 @@
     {
      "panels": [
       {
-       "img": "c1-2",
-       "alt": "Тимур в тёмных очках",
+       "img": "en-c1-2",
+       "alt": "Диас в тёмных очках",
        "grow": 36,
        "mark": "?",
        "bubble": {
@@ -180,8 +181,8 @@
        }
       },
       {
-       "img": "c1-3",
-       "alt": "Диас с другом делают селфи на улице",
+       "img": "en-c1-3",
+       "alt": "Диас у окна",
        "grow": 64,
        "bubble": {
         "lang": "tr",
@@ -197,12 +198,12 @@
     {
      "panels": [
       {
-       "img": "c1-4",
-       "alt": "Тимур у белой стены смотрит в сторону",
+       "img": "en-c1-4",
+       "alt": "Диас на берегу моря",
        "grow": 34
       },
       {
-       "img": "c1-5",
+       "img": "en-c1-5",
        "alt": "Диас у окна с ноутбуком",
        "grow": 66,
        "caption": {
@@ -225,8 +226,8 @@
     {
      "panels": [
       {
-       "img": "c2-1",
-       "alt": "Тимур с планшетом, вид через плечо",
+       "img": "en-c2-1",
+       "alt": "Диас у окна с книгой",
        "grow": 33,
        "caption": {
         "text": "В отеле говорят, что <b>брони на твоё имя нет</b>",
@@ -234,7 +235,7 @@
        }
       },
       {
-       "img": "c2-2",
+       "img": "en-c2-2",
        "alt": "Диас ночью у собора Святого Петра",
        "grow": 33,
        "bubble": {
@@ -246,7 +247,7 @@
        }
       },
       {
-       "img": "c2-3",
+       "img": "en-c2-3",
        "alt": "Диас ночью на набережной",
        "grow": 34,
        "bubble": {
@@ -263,8 +264,8 @@
     {
      "panels": [
       {
-       "img": "c2-4",
-       "alt": "Тимур занимается на планшете",
+       "img": "en-c2-4",
+       "alt": "Диас у окна",
        "grow": 49,
        "bubble": {
         "lang": "en",
@@ -275,8 +276,8 @@
        }
       },
       {
-       "img": "c2-5",
-       "alt": "Тимур у белой стены улыбается",
+       "img": "en-c2-5",
+       "alt": "Диас с напитком на улице",
        "grow": 51,
        "caption": {
         "text": "Бронь нашлась. <b>Ключ у тебя в руке</b>",
@@ -294,12 +295,12 @@
    "alt": "Кирпичный дом ночью в гирляндах, снег и луна",
    "figures": [
     {
-     "img": "silhouette-timur",
+     "img": "en-silhouette",
      "x": 48,
      "w": 13
     },
     {
-     "img": "silhouette-dias",
+     "img": "en-silhouette-2",
      "x": 60,
      "w": 10
     }
@@ -328,7 +329,7 @@
     {
      "panels": [
       {
-       "img": "c3-1",
+       "img": "en-c3-1",
        "alt": "Диас с чашкой кофе",
        "grow": 48,
        "color": true,
@@ -338,8 +339,8 @@
        }
       },
       {
-       "img": "c3-2",
-       "alt": "Тимур на набережной с пальмами",
+       "img": "en-c3-2",
+       "alt": "Диас за столиком в кафе",
        "grow": 52,
        "bubble": {
         "lang": "tr",
@@ -355,28 +356,28 @@
     {
      "panels": [
       {
-       "img": "c3-3",
+       "img": "en-c3-3",
        "alt": "Пицца на столе в кафе",
        "grow": 1
       },
       {
-       "img": "c3-4",
+       "img": "en-c3-4",
        "alt": "Завтрак в кафе",
        "grow": 1
       },
       {
-       "img": "c3-5",
-       "alt": "Задание на планшете",
-       "grow": 1
-      },
-      {
-       "img": "c3-6",
+       "img": "en-c3-5",
        "alt": "Диас в кафе с напитком",
        "grow": 1
       },
       {
-       "img": "c3-7",
-       "alt": "Тимур улыбается на улице",
+       "img": "en-c3-6",
+       "alt": "Диас ночью у стадиона",
+       "grow": 1
+      },
+      {
+       "img": "en-c3-7",
+       "alt": "Диас на футбольном поле",
        "grow": 1
       }
      ],
@@ -385,8 +386,8 @@
     {
      "panels": [
       {
-       "img": "c3-8",
-       "alt": "Диас за столиком в кафе",
+       "img": "en-c3-8",
+       "alt": "Диас на улице с пакетом",
        "grow": 50,
        "bubble": {
         "lang": "en",
@@ -397,8 +398,8 @@
        }
       },
       {
-       "img": "c3-9",
-       "alt": "Тимур у стены с ноутбуком",
+       "img": "en-c3-9",
+       "alt": "Диас в худи",
        "grow": 50
       }
      ],
@@ -407,8 +408,8 @@
     {
      "panels": [
       {
-       "img": "c3-big",
-       "alt": "Тимур в тёмных очках на набережной",
+       "img": "en-c3-big",
+       "alt": "Диас на стадионе",
        "grow": 1,
        "bubble": {
         "lang": "tr",
@@ -437,7 +438,7 @@
    "user": {
     "name": "Ты",
     "sub": "один в поездке",
-    "img": "ep-03"
+    "img": "en-ep-03"
    },
    "laptop": "laptop"
   },
@@ -448,13 +449,13 @@
    "left": {
     "word": "ROMA",
     "color": "pink",
-    "img": "strip-roma",
+    "img": "en-strip-left",
     "href": "buy"
    },
    "right": {
     "word": "DIAS",
     "color": "green",
-    "img": "strip-palms",
+    "img": "en-strip-right",
     "href": "buy"
    },
    "labelLeft": "DIAS<br>ENGLISH",
@@ -469,7 +470,7 @@
     "text": "ПРОЙТИ<br>МИНИ-ТЕСТ",
     "href": "#quiz"
    },
-   "silhouette": "silhouette-dias"
+   "silhouette": "en-silhouette"
   },
   {
    "type": "paths",
@@ -619,7 +620,7 @@
      "href": "buy"
     },
     {
-     "img": "speaker-you",
+     "img": "en-speaker-you",
      "name": [
       "ТЫ",
       "В ДОРОГЕ"
@@ -807,7 +808,7 @@
      "price": "30 €",
      "when": "НАВСЕГДА",
      "href": "buy",
-     "silhouette": "silhouette-dias"
+     "silhouette": "en-silhouette"
     },
     {
      "color": "black",
@@ -868,7 +869,7 @@
     "ЗА НОВЫМИ СЕРИЯМИ"
    ],
    "text": "И подписывайся, если хочешь <b>следующие серии</b> раньше всех: такси, аптека, рынок и ещё <em>девять ситуаций в дороге</em>",
-   "peek": "timur-peek-footer",
+   "peek": "en-peek-footer",
    "bg": "hero-bg"
   }
  ],
