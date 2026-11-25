@@ -5,7 +5,7 @@ const out = new URL('./figma/', import.meta.url).pathname; mkdirSync(out, { recu
 const b = await chromium.launch({ channel: 'chrome', args: ['--mute-audio'] });
 const ONLY = process.argv[2];
 for (const [page, path] of [['en', 'en/'], ['en-lesson', 'en/lesson/'], ['tr', 'tr/'], ['tr-lesson', 'tr/lesson/']].filter(x => !ONLY || x[0] === ONLY)) for (const w of [1440, 834, 390]) {
-  const p = await b.newPage({ viewport: { width: w, height: 900 } });
+  const p = await b.newPage({ viewport: { width: w, height: 900 }, reducedMotion: 'reduce' });
   await p.goto('http://localhost:8704/' + path, { waitUntil: 'networkidle' });
   await p.addStyleTag({ content: '#snow{display:none!important} *{animation:none!important;transition:none!important} [data-reveal]{opacity:1!important;transform:none!important}' });
   const H = await p.evaluate(() => document.documentElement.scrollHeight);
