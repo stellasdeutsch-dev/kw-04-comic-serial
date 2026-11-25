@@ -42,7 +42,7 @@
 | tr-c3-6.webp | ~/dias/timur-video/IMG_2854.MOV, кадр на 8 с | Тимур |
 | tr-c3-7.webp | ~/dias/timur-video/IMG_2801.MOV, кадр на 14 с | Тимур |
 | tr-c3-8.webp | ~/dias/timur-video/IMG_2810.MOV, кадр на 10 с | Тимур |
-| tr-c3-9.webp | ~/dias/timur-video/IMG_2845.HEIC | Тимур |
+| tr-c3-9.webp | ~/dias/timur-video/IMG_2850.HEIC | Тимур |
 | tr-c3-big.webp | ~/dias/timur-video/IMG_2801.MOV, кадр на 11 с | Тимур |
 | en-ep-01.webp | ~/dias/shared/dias-photos-web/dias-IMG_2534.webp | Диас |
 | en-ep-02.webp | ~/dias/shared/dias-photos-web/dias-IMG_8084-3.webp | Диас |
@@ -64,7 +64,7 @@
 | tr-ep-06.webp | ~/dias/timur-video/IMG_2810.MOV, кадр на 5 с | Тимур |
 | tr-ep-07.webp | ~/dias/timur-video/IMG_2813.MOV, кадр на 4 с | Тимур |
 | tr-ep-08.webp | ~/dias/timur-video/IMG_2856.HEIC | Тимур |
-| tr-ep-09.webp | ~/dias/timur-video/IMG_2845.HEIC | Тимур |
+| tr-ep-09.webp | ~/dias/timur-video/IMG_2850.HEIC | Тимур |
 | tr-ep-10.webp | ~/dias/timur-video/IMG_2854.MOV, кадр на 4 с | Тимур |
 | tr-ep-11.webp | ~/dias/timur-video/IMG_2800.MOV, кадр на 12 с | Тимур |
 | tr-ep-12.webp | ~/dias/timur-video/IMG_2799.MOV, кадр на 25 с | Тимур |
@@ -86,7 +86,7 @@
 | tr-peek-right.webp | ~/dias/timur-video/IMG_2801.MOV, кадр на 11 с | Тимур |
 | tr-peek-footer.webp | ~/dias/timur-video/IMG_2800.MOV, кадр на 12 с | Тимур |
 | speaker-timur.webp | ~/dias/timur-video/IMG_2856.HEIC | Тимур |
-| card-timur.webp | ~/dias/timur-video/IMG_2845.HEIC | Тимур |
+| card-timur.webp | ~/dias/timur-video/IMG_2850.HEIC | Тимур |
 | tr-silhouette.webp | ~/dias/timur-video/IMG_2853.MOV, кадр на 3 с | Тимур |
 | tr-silhouette-2.webp | ~/dias/timur-video/IMG_2853.MOV, кадр на 8 с | Тимур |
 | tr-speaker-you.webp | ~/dias/timur-video/IMG_2853.MOV, кадр на 8 с | Тимур |
