@@ -1,0 +1,7 @@
+design/
+work/
+qa/shots/
+.DS_Store
+__pycache__/
+qa/figma/
+qa/compare-*.jpg
