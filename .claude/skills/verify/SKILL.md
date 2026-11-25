@@ -14,3 +14,5 @@ description: Собрать и проверить сайт №04 перед ко
 5. Тексты: `grep -n "[—–]" content.en.json content.tr.json` должен быть пустым (тире запрещены). Ссылки: в `gh/en/` только `2c950aa0`, в `gh/tr/` только `2cdbb9f8`.
 6. После пуша: `gh api repos/stellasdeutsch-dev/kw-04-comic-serial/pages/builds/latest --jq .status` = `built`, обе ссылки отвечают 200.
 Звук не включать, Playwright запускается с `--mute-audio`.
+
+- Живой сайт (RULES 4а): `node qa/fullpage.mjs <1440|390> <en|tr> [reduce]` даёт скриншот всей страницы в `qa/shots/full-*.png` и печатает `hiddenN` (после прокрутки должно быть 0; на 390 допустима `path__line`, она скрыта на телефоне ещё в образце). С `reduce` движение выключено, всё видно сразу. Вес страницы до ~3 МБ.

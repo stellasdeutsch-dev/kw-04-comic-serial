@@ -25,8 +25,46 @@
     download: '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5v8M8.5 12.5l3.5 3.5 3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>',
     shield: '<path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.7"/>',
     check: '<path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>',
-    cart: '<path d="M3 4h2.4l2.2 11h10.6l2-8H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.5" fill="currentColor"/><circle cx="17" cy="19.5" r="1.5" fill="currentColor"/>'
+    cart: '<path d="M3 4h2.4l2.2 11h10.6l2-8H7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="19.5" r="1.5" fill="currentColor"/><circle cx="17" cy="19.5" r="1.5" fill="currentColor"/>',
+    /* живой сайт: иконки пунктов, вопросов и цифр */
+    book: '<path d="M4 5.5C6.5 4.3 9.3 4.3 12 6c2.7-1.7 5.5-1.7 8-.5v13c-2.5-1.2-5.3-1.2-8 .5-2.7-1.7-5.5-1.7-8-.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 6v13" stroke="currentColor" stroke-width="1.8"/>',
+    abc: '<rect x="3" y="6" width="15" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6.5 14l2-5 2 5M7.2 12.6h2.6M21 9v10a2 2 0 0 1-2 2H7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+    film: '<rect x="3.5" y="5" width="17" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7.5 5v14M16.5 5v14M3.5 9.5h4M3.5 14.5h4M16.5 9.5h4M16.5 14.5h4" stroke="currentColor" stroke-width="1.8"/>',
+    tag: '<path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1 1 0 0 1 0 1.4l-7.3 7.3a1 1 0 0 1-1.4 0z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8.3" cy="8.3" r="1.6" fill="currentColor"/>',
+    click: '<path d="M9 9l11 4-5 1.8L13.2 20z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 3.5v2.5M2.5 7H5M3.7 3.7l1.8 1.8M10.3 3.7L8.5 5.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+    exam: '<rect x="5" y="4" width="14" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 4V2.8h6V4M8.5 12.5l2.4 2.4 4.6-4.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+    case: '<rect x="3" y="7.5" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 7.5V5.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 12.5h18" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+    layers: '<path d="M12 3.5l9 4.5-9 4.5L3 8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 12.2l9 4.5 9-4.5M3 16.2l9 4.5 9-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
+    route: '<circle cx="6" cy="18" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M18 3.5c-2 0-3.5 1.5-3.5 3.4 0 2.4 3.5 5.6 3.5 5.6s3.5-3.2 3.5-5.6c0-1.9-1.5-3.4-3.5-3.4z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.3 18H15a3 3 0 0 0 0-6h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 2.4"/>',
+    chat: '<path d="M4 5.5h16v10H11l-4.5 3.8v-3.8H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="8.5" cy="10.5" r="1.1" fill="currentColor"/><circle cx="12" cy="10.5" r="1.1" fill="currentColor"/><circle cx="15.5" cy="10.5" r="1.1" fill="currentColor"/>',
+    bars: '<path d="M5 20v-5M10 20v-8M15 20V9M20 20V5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>',
+    target: '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/>',
+    clock: '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.4 2.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+    cap: '<path d="M2.5 9.5L12 5l9.5 4.5L12 14z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6.5 11.5v4.3c1.5 1.5 3.4 2.2 5.5 2.2s4-.7 5.5-2.2v-4.3M21.5 9.5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+    bag: '<rect x="5" y="7.5" width="14" height="11.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 7.5V4.5h5v3M8 19v1.5M16 19v1.5M9 11v4.5M15 11v4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+    compass: '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 8.5l-2 5-5 2 2-5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
+    phone: '<rect x="6.5" y="2.8" width="11" height="18.4" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.5 18h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+    megaphone: '<path d="M3.5 10v4h3l7 4.5v-13l-7 4.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M17 9a4 4 0 0 1 0 6M7 14l1.2 5h2.4L10 15.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+    whatsapp: '<path d="M4 20l1.2-4A8.3 8.3 0 1 1 8 18.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.5c0 3.5 2.6 6.5 6.4 6.5l.8-1.6-2-1-1 .9c-1-.5-2-1.5-2.4-2.4l.9-1-1-2z" fill="currentColor"/>'
   };
+  /* иконка по смыслу подписи: у каждого пункта своя */
+  function kicon(t) {
+    t = String(t).toLowerCase();
+    if (/карт|route/.test(t)) return 'route';
+    if (/граммат/.test(t)) return 'book';
+    if (/лекс|слов|lexika|озвуч/.test(t)) return 'abc';
+    if (/книг|фильм|аудио/.test(t)) return 'film';
+    if (/ии |gemini|ии$/.test(t)) return 'chat';
+    if (/интерактив/.test(t)) return 'click';
+    if (/экзам/.test(t)) return 'exam';
+    if (/работ/.test(t)) return 'case';
+    if (/материал|уровн/.test(t)) return 'layers';
+    if (/навсегда|один раз|€/.test(t)) return 'tag';
+    if (/whatsapp/.test(t)) return 'whatsapp';
+    if (/подписк/.test(t)) return 'tag';
+    return 'check';
+  }
+  function deco(b, cls) { return b.deco ? img(b.deco, b.decoAlt || '', 'deco deco--' + cls) : ''; }
   function icon(n, cls) { return '<svg class="ic ' + (cls || '') + '" viewBox="0 0 24 24" aria-hidden="true">' + ICONS[n] + '</svg>'; }
 
   /* ---------- Помощники ---------- */
@@ -52,7 +90,7 @@
     }).join('') + '</div>';
   }
   function tabs() {
-    return '<nav class="tabs wrap" aria-label="Серии">' + C.tabs.map(function (t) {
+    return '<nav class="tabs wrap" aria-label="Серии" data-stagger>' + C.tabs.map(function (t) {
       return t.href ? '<a class="tab' + (t.current ? ' is-current' : '') + '" href="' + t.href + '"' + (t.current ? ' aria-current="page"' : '') + '>' + esc(t.label) + '</a>'
         : '<span class="tab" title="Серия скоро">' + esc(t.label) + '</span>';
     }).join('') + '</nav>';
@@ -63,7 +101,7 @@
     return '<div class="ticker__track" aria-hidden="true">' + row + row + '</div><span class="sr">' + esc(words.join(', ')) + '</span>';
   }
   function bubble(b) {
-    return '<p class="bubble' + (b.lang === 'tr' ? ' bubble--tr' : '') + (b.small ? ' bubble--small' : '') + (b.big ? ' bubble--big' : '') + (b.x >= 45 ? ' bubble--r' : '') + (b.y >= 50 ? ' bubble--b' : '') +
+    return '<p data-pop class="bubble' + (b.lang === 'tr' ? ' bubble--tr' : '') + (b.small ? ' bubble--small' : '') + (b.big ? ' bubble--big' : '') + (b.x >= 45 ? ' bubble--r' : '') + (b.y >= 50 ? ' bubble--b' : '') +
       '" style="left:' + b.x + '%;top:' + b.y + '%" lang="' + (b.lang === 'tr' ? 'tr' : 'en') + '">' + esc(b.text) +
       (b.ru ? '<small lang="ru">' + esc(b.ru) + '</small>' : '') + '</p>';
   }
@@ -119,7 +157,7 @@
     return '<section class="comic' + (b.topSpace ? ' comic--space' : '') + '"' + (b.id ? ' id="' + b.id + '"' : '') + '><div class="wrap">' +
       (b.title ? '<h2 class="comic__title" data-reveal>' + esc(b.title) + '</h2>' : '') +
       b.rows.map(function (r) {
-        return '<div class="crow' + (r.panels.length > 2 ? ' crow--many' : '') + '" style="--ar:1024/' + Math.round(r.h * 1024 / 878) + '" data-reveal>' +
+        return '<div class="crow' + (r.panels.length > 2 ? ' crow--many' : '') + '" style="--ar:1024/' + Math.round(r.h * 1024 / 878) + '" data-stagger>' +
           r.panels.map(function (p, i) { return panel(p, i, r.panels.length); }).join('') + '</div>';
       }).join('') + '</div></section>';
   };
@@ -135,16 +173,16 @@
       '<p class="search__lead" data-reveal>' + b.lead + '</p>' +
       '<div class="search__row" data-reveal><div class="search__bar">' + icon('search') + '<span class="q">' + esc(b.query) + '</span><span class="caret"></span><span class="eng">' + esc(b.engine) + '</span><span class="tools">' + icon('translate') + icon('refresh') + '</span></div>' +
       '<div class="search__user">' + img(b.user.img, '') + '<div><b>' + esc(b.user.name) + '</b><span>' + esc(b.user.sub) + '</span></div></div></div>' +
-      '<a class="search__ad" href="' + esc(url(b.adHref)) + '"' + ext(b.adHref) + '><span class="ad-lbl">' + esc(b.adLabel) + '</span><span>' + b.adText + '</span></a>' +
+      '<a class="search__ad" href="' + esc(url(b.adHref)) + '"' + ext(b.adHref) + '><span class="ad-lbl">' + icon('megaphone') + esc(b.adLabel) + '</span><span>' + b.adText + '</span></a>' +
       '<svg class="search__cursor" viewBox="0 0 24 24" aria-hidden="true">' + ICONS.hand + '</svg>' +
       '<small class="search__note">' + esc(b.note) + '</small>' +
-      img(b.laptop, '', 'search__laptop') + '</section>';
+      img(b.laptop, '', 'search__laptop') + deco(b, 'search') + '</section>';
   };
 
   R.browser = function (b) {
     var favs = 'NYYMYN•☆M○○○~GF✦YNS✦YYNGG✦GGGGGGЯGG'.split('').map(function (c) { return '<i>' + c + '</i>'; }).join('');
     function vcard(side, d) {
-      return a(d.href, 'vcard vcard--' + side, '<canvas data-matrix="#000"></canvas>' + d.word.split('').map(function (ch) { return '<span>' + ch + '</span>'; }).join(''), d.word + ': купить');
+      return a(d.href, 'vcard vcard--' + side, '<canvas data-matrix="#000"></canvas>' + d.word.split('').map(function (ch, i) { return '<span style="--i:' + i + '">' + ch + '</span>'; }).join(''), d.word + ': купить');
     }
     return '<section class="wide embed browser" aria-label="Платформы Диаса и Тимура">' +
       '<div class="chrome">' + icon('sidebar') + icon('back') + icon('fwd') + icon('shield') + '<div class="url">' + icon('lock') + esc(b.url) + '</div>' + icon('download') + icon('share') + icon('plus') + icon('tabs') + '</div>' +
@@ -167,18 +205,18 @@
     return '<section class="wide embed paths">' +
       '<h2 class="blur-h" data-reveal>' + b.heading.join('<br>') + '</h2>' +
       '<div class="paths__stage">' + img(b.pill, 'Капсула: половина зелёная, половина розовая', 'paths__pill') +
-        '<svg class="path__line" viewBox="0 0 100 50" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%" aria-hidden="true"><path vector-effect="non-scaling-stroke" d="M8 16H34L40 22.5"/><path vector-effect="non-scaling-stroke" d="M92 33H72L64 27"/></svg>' +
-        a(b.path1.href, 'path path--1', '<h3>' + esc(b.path1.title) + '</h3>' + b.path1.text) +
-        a(b.path2.href, 'path path--2', '<h3>' + esc(b.path2.title) + '</h3>' + b.path2.text) +
+        '<svg class="path__line" data-draw viewBox="0 0 100 50" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%" aria-hidden="true"><path vector-effect="non-scaling-stroke" pathLength="1" d="M8 16H34L40 22.5"/><path vector-effect="non-scaling-stroke" pathLength="1" d="M92 33H72L64 27"/></svg>' +
+        a(b.path1.href, 'path path--1', '<h3>' + icon('compass') + esc(b.path1.title) + '</h3>' + b.path1.text) +
+        a(b.path2.href, 'path path--2', '<h3>' + esc(b.path2.title) + icon('phone') + '</h3>' + b.path2.text) +
       '</div></section>';
   };
 
   R.speakers = function (b) {
     return '<section class="wide embed speakers">' +
       '<h2 class="blur-h" data-reveal>' + b.heading.join('<br>') + '</h2>' +
-      '<div class="speakers__grid" style="--n:' + b.items.length + '">' + b.items.map(function (s) {
+      deco(b, 'speakers') + '<div class="speakers__grid" style="--n:' + b.items.length + '" data-stagger>' + b.items.map(function (s, i) {
         return a(s.href, 'spk' + (s.dark ? ' spk--dark' : ''), '<div class="spk__ph">' + img(s.img, s.alt || s.name[0]) + '</div>' +
-          '<h3>' + s.name.map(esc).join('<br>') + '</h3><div class="spk__role">' + esc(s.role) + '</div>' +
+          '<h3>' + s.name.map(esc).join('<br>') + '</h3><div class="spk__role">' + icon(i === 0 ? 'cap' : 'bag') + esc(s.role) + '</div>' +
           '<div class="spk__txt">' + icon('arrow') + '<span>' + s.text + '</span></div>');
       }).join('') + '</div></section>';
   };
@@ -187,9 +225,9 @@
     var col = b.color === 'pink' ? 'var(--pink)' : 'var(--green)';
     return '<section class="gal wrap" id="' + b.id + '" style="--c:' + col + '">' +
       '<h2 class="gal__title" data-reveal>' + esc(b.title) + '</h2><p class="gal__sub">' + esc(b.sub) + '</p>' +
-      '<div class="stats" style="--n:' + b.stats.length + '" data-reveal>' + b.stats.map(function (s) { return '<div class="stat"><b>' + esc(s.n) + '</b><span>' + esc(s.t) + '</span></div>'; }).join('') + '</div>' +
+      '<div class="stats" style="--n:' + b.stats.length + '" data-stagger>' + b.stats.map(function (s) { return '<div class="stat">' + icon(kicon(s.t + ' ' + s.n), 'stat__ic') + '<b data-count="' + esc(s.n) + '">' + esc(s.n) + '</b><span>' + esc(s.t) + '</span></div>'; }).join('') + '</div>' +
       b.rows.map(function (r) {
-        var hh = r.length === 1 ? 470 : r.length === 2 ? 400 : 300; return '<div class="grow" style="--ar:1024/' + hh + '" data-reveal>' + r.map(function (p) {
+        var hh = r.length === 1 ? 470 : r.length === 2 ? 400 : 300; return '<div class="grow" style="--ar:1024/' + hh + '" data-stagger>' + r.map(function (p) {
           var tall = /-m$/.test(p.img);
           return '<figure class="panel' + (tall ? ' is-tall' : '') + '" style="flex:' + p.grow + ' 1 0">' + img(p.img, p.cap) + '<figcaption>' + esc(p.cap) + '</figcaption></figure>';
         }).join('') + '</div>';
@@ -201,7 +239,7 @@
     return '<section class="frame wide" aria-label="Скриншоты в рамке"><div class="frame__stage"><div class="frame__pic">' + img(b.bg, '', 'frame__bg') +
       '<div class="frame__shot">' + img(b.shot, b.shotAlt) + '</div>' +
       b.labels.map(function (l) {
-        return '<div class="lbl' + (l.you ? ' lbl--you' : '') + '" style="left:calc(21.8% + ' + (l.x * 0.254) + '%);top:calc(8.2% + ' + (l.y * 0.645) + '%)"><b>' + esc(l.title) + '</b>' + (l.text ? '<span>' + l.text + '</span>' : '') + '</div>';
+        return '<div class="lbl' + (l.you ? ' lbl--you' : '') + '" data-pop style="left:calc(21.8% + ' + (l.x * 0.254) + '%);top:calc(8.2% + ' + (l.y * 0.645) + '%)"><b>' + esc(l.title) + '</b>' + (l.text ? '<span>' + l.text + '</span>' : '') + '</div>';
       }).join('') +
       '<div class="frame__phone">' + img(b.phone.img, b.phone.alt) + '<b>' + esc(b.phone.rec) + '</b></div></div>' +
       '<h2 class="frame__head" data-reveal>' + b.heading.map(function (h) { return '<span>' + esc(h) + '</span>'; }).join(' ') + '</h2>' +
@@ -215,20 +253,20 @@
         '<div class="ocard__tag"><b>' + esc(c.tag[0]) + '</b><span>' + esc(c.tag[1]) + '</span></div></div>' +
         '<div class="ocard__body"><div class="ocard__kicker">' + esc(c.kicker) + '</div>' +
         '<h3 class="ocard__big"><span>' + esc(c.big1) + '</span><span>' + esc(c.big2) + '</span><em>' + esc(c.script) + '</em></h3>' +
-        '<div class="ocard__meta"><span>' + esc(c.meta[0]) + '</span><i></i><span>' + esc(c.meta[1]) + '</span></div>' +
+        '<div class="ocard__meta"><span class="price" data-pop>' + icon('tag') + esc(c.meta[0]) + '</span><i></i><span>' + esc(c.meta[1]) + '</span></div>' +
         '<p class="ocard__who">' + esc(c.forWhom) + '</p>' +
-        '<ul class="ocard__list">' + c.list.map(function (li) { return '<li>' + icon('check') + '<span>' + esc(li) + '</span></li>'; }).join('') + '</ul>' +
+        '<ul class="ocard__list" data-stagger>' + c.list.map(function (li) { return '<li>' + icon(kicon(li)) + '<span>' + esc(li) + '</span></li>'; }).join('') + '</ul>' +
         '<span class="ocard__cta">' + icon('cart') + esc(c.cta) + '</span></div></div>');
     }).join('');
     var tk = b.tickets.map(function (t) {
       return a(t.href, 'ticket ticket--' + t.color, '<div class="ticket__main"><div class="ticket__name"><span>' + esc(t.name[0]) + ' <i>' + esc(t.tariff) + '</i></span><span>' + esc(t.name[1]) + '</span></div>' +
-        '<div class="ticket__lines">' + t.lines + '</div><div class="ticket__foot"><span>' + esc(t.price) + '</span><span>' + esc(t.when) + '</span></div>' +
+        '<div class="ticket__lines">' + t.lines + '</div><div class="ticket__foot"><span class="ticket__price">' + esc(t.price) + '</span><span>' + esc(t.when) + '</span></div>' +
         (t.photo ? img(t.photo, t.photoAlt || '', 'ticket__photo') : '') + '</div><div class="ticket__stub">' + barcodeSvg(t.color === 'green' ? 3 : 5) + '</div>', 'Купить ' + t.name.join(' '));
     }).join('');
     return '<section class="offers wrap" id="' + b.id + '">' + cards +
       '<div class="obox" data-reveal><div><h3>' + b.box.title.map(esc).join('<br>') + '</h3><ul>' +
       b.box.items.map(function (it) { return '<li>' + a(it.href, '', icon('arrow') + esc(it.text)) + '</li>'; }).join('') + '</ul></div>' +
-      '<div class="tickets">' + tk + '</div></div></section>';
+      '<div class="tickets" data-stagger>' + tk + '</div></div></section>';
   };
 
   R.quiz = function (b) {
@@ -236,14 +274,14 @@
     return '<section class="wide embed quiz" id="' + b.id + '" style="--c:' + col + '" aria-label="Мини-тест">' +
       '<h2 class="quiz__h" data-reveal>' + b.heading.map(esc).join('<br>') + '</h2><p class="quiz__sub">' + esc(b.sub) + '</p>' +
       '<div class="quiz__grid"><ol class="quiz__qs">' + b.questions.map(function (q, i) {
-        return '<li class="quiz__q" data-key="' + q.key + '"><div class="quiz__num">0' + (i + 1) + '</div><div><h3>' + esc(q.q) + '</h3><div class="quiz__opts" role="group" aria-label="' + esc(q.q) + '">' +
+        return '<li class="quiz__q" data-key="' + q.key + '"><div class="quiz__num">0' + (i + 1) + '</div><div><h3>' + icon({ level: 'bars', goal: 'target', time: 'clock' }[q.key] || 'check', 'quiz__ic') + '<span>' + esc(q.q) + '</span></h3><div class="quiz__opts" role="group" aria-label="' + esc(q.q) + '" data-stagger>' +
           q.options.map(function (o) { return '<button type="button" class="quiz__opt" data-v="' + o.v + '" aria-pressed="false">' + esc(o.t) + '</button>'; }).join('') + '</div></div></li>';
       }).join('') + '</ol>' +
       '<div class="quiz__res" aria-live="polite"><div class="quiz__ticket"><div class="quiz__main"><div class="quiz__rt">' + esc(b.resultTitle) + '</div>' +
       '<div class="quiz__level" data-out="title">?</div><p class="quiz__wait" data-out="wait">Ответь на ' + b.questions.length + ' вопроса, и здесь появится твой старт</p>' +
       '<p data-out="level"></p><p data-out="goal"></p><p data-out="time"></p>' +
       '<div class="quiz__acts">' + a(b.href, 'quiz__cta', icon('cart') + '<span>' + esc(b.cta) + '</span>') + '<button type="button" class="quiz__again">' + icon('refresh') + esc(b.again) + '</button></div></div>' +
-      '<div class="quiz__stub">' + barcodeSvg(9) + '</div></div></div></div>' +
+      '<div class="quiz__stub">' + barcodeSvg(9) + '</div></div>' + deco(b, 'quiz') + '</div></div>' +
       '<script type="application/json" class="quiz__data">' + JSON.stringify(b.results).replace(/</g, '\\u003c') + '</script></section>';
   };
 
@@ -263,7 +301,7 @@
       '<div class="foot__body">' + img(b.bg, '', 'foot__bg') + img(b.peek, b.peekAlt || '', 'foot__peek') +
       '<div class="wrap"><div class="foot__grid">' + qr('foot__qr', C.links.social.label) +
       '<div><h2 class="foot__title">' + b.title.map(esc).join('<br>') + '</h2><p class="foot__text">' + b.text + '</p></div></div>' +
-      episodes() + '</div></div></footer>';
+      episodes() + '</div>' + deco(b, 'foot') + '</div></footer>';
   };
 
   /* ---------- Сборка ---------- */
@@ -304,12 +342,38 @@
   }
   Array.prototype.forEach.call(document.querySelectorAll('[data-qr]'), drawQR);
 
-  /* Появление */
-  var rev = document.querySelectorAll('[data-reveal]');
-  if ('IntersectionObserver' in window && !reduce) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+  /* Появление: класс «скрыть до появления» ставит сам скрипт (без JS всё видно) */
+  var motion = 'IntersectionObserver' in window && !reduce;
+  if (motion) document.documentElement.classList.add('js-motion');
+  Array.prototype.forEach.call(document.querySelectorAll('.foot .eps'), function (el) { el.setAttribute('data-stagger', ''); });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-stagger]'), function (el) {
+    Array.prototype.forEach.call(el.children, function (c, i) { c.style.setProperty('--i', i); });
+  });
+  /* пузыри и метки внутри одного кадра выходят по очереди */
+  Array.prototype.forEach.call(document.querySelectorAll('.frame__pic, .scene, .cont__bubbles'), function (box) {
+    Array.prototype.forEach.call(box.querySelectorAll('[data-pop]'), function (el, i) { el.style.setProperty('--d', (i * 140) + 'ms'); });
+  });
+  function countUp(el) {
+    var full = el.getAttribute('data-count'), m = full.match(/^(\D*)(\d+)(.*)$/);
+    if (!m) return; var to = +m[2], t0 = performance.now(), dur = Math.min(1600, 700 + to);
+    (function tick(t) { var k = Math.min(1, (t - t0) / dur); k = 1 - Math.pow(1 - k, 3); el.textContent = m[1] + Math.round(to * k) + m[3]; if (k < 1) requestAnimationFrame(tick); else el.textContent = full; })(t0);
+  }
+  function typeIn(el) {
+    var full = el.textContent, i = 0; el.textContent = '';
+    (function next() { i++; el.textContent = full.slice(0, i); if (i < full.length) setTimeout(next, 45); })();
+  }
+  function show(el) {
+    el.classList.add('in');
+    if (el.hasAttribute('data-stagger')) setTimeout(function () { el.classList.add('done'); }, el.children.length * 90 + 800);
+    if (!motion) return;
+    Array.prototype.forEach.call(el.querySelectorAll('[data-count]'), countUp);
+    if (el.classList.contains('search__row')) typeIn(el.querySelector('.q'));
+  }
+  var rev = document.querySelectorAll('[data-reveal], [data-stagger], [data-pop], [data-draw], .deco');
+  if (motion) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
     Array.prototype.forEach.call(rev, function (el) { io.observe(el); });
-  } else { Array.prototype.forEach.call(rev, function (el) { el.classList.add('in'); }); }
+  } else { Array.prototype.forEach.call(rev, show); }
 
   /* «Матрица»: столбцы символов */
   var GLYPHS = 'アイウエオカキクケコサシスセソ0123456789ABCDEFİŞĞÜÖÇ';

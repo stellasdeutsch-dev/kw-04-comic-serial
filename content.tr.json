@@ -432,7 +432,9 @@
     "sub": "один в поездке",
     "img": "tr-ep-02"
    },
-   "laptop": "laptop"
+   "laptop": "laptop",
+   "deco": "tr-obj-tea",
+   "decoAlt": "Стакан турецкого чая"
   },
   {
    "type": "browser",
@@ -592,7 +594,9 @@
    "cta": "Купить за 30 €",
    "href": "buy",
    "again": "Пройти заново",
-   "color": "green"
+   "color": "green",
+   "deco": "tr-obj-notebook",
+   "decoAlt": "Тетрадь с карандашом"
   },
   {
    "type": "speakers",
@@ -625,7 +629,9 @@
      "dark": true,
      "alt": "Тимур занимается на планшете, вид через плечо"
     }
-   ]
+   ],
+   "deco": "tr-obj-cards",
+   "decoAlt": "Карточки для слов"
   },
   {
    "type": "gallery",
@@ -870,7 +876,9 @@
    "text": "И подписывайся, если хочешь <b>следующие серии</b> раньше всех: такси, аптека, рынок и ещё <em>девять ситуаций в дороге</em>",
    "peek": "tr-photo-footer",
    "bg": "hero-bg",
-   "peekAlt": "Тимур у белой стены"
+   "peekAlt": "Тимур у белой стены",
+   "deco": "tr-obj-simit",
+   "decoAlt": "Симит"
   }
  ],
  "_readme": "Контент вариации TR. Все тексты, ссылки, картинки и порядок блоков. ad: true значит блок только на главной, на lesson/ его нет. Пересборка: python3 tools/build.py",

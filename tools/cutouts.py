@@ -14,18 +14,26 @@ SRC = {
     # предметы (генерации ElevenLabs в исходном размере)
     'newspaper': (W + '/gen/newspaper.png', 'предмет', 2),
     'objects': (W + '/gen/objects.png', 'предметы', 2),
+    # предметы по теме языка (живой сайт, RULES 4а): части после --split идут в этом порядке
+    'objects-en': (W + '/gen/objects-en.png', 'предметы /en/', 2),
+    'objects-tr': (W + '/gen/objects-tr.png', 'предметы /tr/', 2),
 }
+SPLIT = {'objects': ['passport', 'boarding-pass', 'airplane'],
+         'objects-en': ['en-obj-books', 'en-obj-notebook', 'en-obj-bus', 'en-obj-cards'],
+         'objects-tr': ['tr-obj-tea', 'tr-obj-notebook', 'tr-obj-cards', 'tr-obj-simit']}
 os.makedirs(W + '/clean', exist_ok=True)
 names = sys.argv[1:] or list(SRC)
 for n in names:
     src, who, er = SRC[n]
     raw = f'{W}/clean/{n}-raw.png'
-    if n == 'objects':
-        subprocess.run(['nice', CUT, src, raw, '--split', f'{W}/clean/objparts/'], check=True, capture_output=True)
-        parts = sorted(os.listdir(f'{W}/clean/objparts'))
+    if n in SPLIT:
+        d = f'{W}/clean/objparts' + ('' if n == 'objects' else n[7:]) + '/'
+        subprocess.run(['nice', CUT, src, raw, '--split', d], check=True, capture_output=True)
+        parts = sorted(os.listdir(d))
+        assert len(parts) == len(SPLIT[n]), (n, parts)
         for i, p in enumerate(parts):
-            out = ['passport', 'boarding-pass', 'airplane'][i]
-            subprocess.run(['nice', 'python3', DEF, f'{W}/clean/objparts/{p}', f'{W}/clean/{out}.png', '--erode', str(er), '--check', f'{W}/clean/{out}-check.jpg'], check=True, capture_output=True)
+            out = SPLIT[n][i]
+            subprocess.run(['nice', 'python3', DEF, d + p, f'{W}/clean/{out}.png', '--erode', str(er), '--check', f'{W}/clean/{out}-check.jpg'], check=True, capture_output=True)
             print(out, 'ok')
         continue
     subprocess.run(['nice', CUT, src, raw], check=True, capture_output=True)

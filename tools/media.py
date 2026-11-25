@@ -66,7 +66,8 @@ for v, items in PANELS.items():
     for (name, asp), (src, cx, cy, box) in zip(LAYOUT, items):
         im = fit(Image.open(src), asp, cx, cy, box)
         im = ImageEnhance.Color(im).enhance(.75) if name == 'c3-1' else bw(im)
-        save(im, f'{v}-{name}', q=74, maxw=1400)
+        # по ширине на экране: узкие кадры до 700 px, широкие до 1200 (вес страницы до ~3 МБ)
+        save(im, f'{v}-{name}', q=66, maxw=640 if asp < 1.2 else 1100)
         PEOPLE.append((f'{v}-{name}.webp', src_name(src), WHO[v]))
 
 # ---------- Аватары серий ----------
@@ -104,6 +105,9 @@ save_alpha('newspaper', 'newspaper', 900)
 save_alpha('passport', 'passport', 300)
 save_alpha('boarding-pass', 'boarding-pass', 420)
 save_alpha('airplane', 'airplane', 520)
+# предметы по теме языка (живой сайт): /en/ книги, тетрадь, карточки, лондонский автобус; /tr/ чай, тетрадь, карточки, симит
+for n in ['en-obj-books', 'en-obj-notebook', 'en-obj-bus', 'en-obj-cards', 'tr-obj-tea', 'tr-obj-notebook', 'tr-obj-cards', 'tr-obj-simit']:
+    save_alpha(n, n, 480)
 
 # ---------- Люди: только целые фото со своим фоном (без вырезки и масок) ----------
 WHOLE = {
@@ -119,8 +123,9 @@ for v, slots in WHOLE.items():
         if im.height / im.width > 1.5:
             h = round(im.width * 4 / 3); top = im.height - h if slot not in ('you', 'ticket') else (im.height - h) // 2
             im = im.crop((0, top, im.width, top + h))
-        if im.height > 1000:
-            im = im.resize((round(im.width * 1000 / im.height), 1000), Image.LANCZOS)
+        mh = 560 if slot in ('peek-left', 'peek-right', 'footer', 'ticket') else 860  # маленькие рамки не тянут лишний вес
+        if im.height > mh:
+            im = im.resize((round(im.width * mh / im.height), mh), Image.LANCZOS)
         save(im, f'{v}-photo-{slot}', q=78)
         PEOPLE.append((f'{v}-photo-{slot}.webp', src_name(src), WHO[v]))
 
