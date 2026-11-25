@@ -26,7 +26,7 @@ SRC = {
     'tr-peek-right': (W + '/full/t_2801_11.png', 'Тимур', 2),
     'tr-peek-footer': (W + '/full/t_2800_12.png', 'Тимур', 2),
     'speaker-timur': (TIM + 'IMG_2856.HEIC', 'Тимур', 2),
-    'card-timur': (TIM + 'IMG_2845.HEIC', 'Тимур', 2),
+    'card-timur': (TIM + 'IMG_2850.HEIC', 'Тимур', 5),
     'tr-sil-a': (W + '/full/t_2853_3.png', 'Тимур', 2),
     'tr-sil-b': (W + '/full/t_2853_8.png', 'Тимур', 2),
     # предметы (генерации ElevenLabs в исходном размере)
@@ -49,3 +49,33 @@ for n in names:
     subprocess.run(['nice', CUT, src, raw], check=True, capture_output=True)
     subprocess.run(['nice', 'python3', DEF, raw, f'{W}/clean/{n}.png', '--erode', str(er), '--check', f'{W}/clean/{n}-check.jpg'], check=True, capture_output=True)
     print(n, who, 'ok')
+
+# Газета: в шапке сгенерировано «TEN CENTS» (цена не в евро). Закрашиваем строку текста бумагой из той же строки.
+if 'newspaper' in names:
+    from PIL import Image
+    import numpy as np
+    p = f'{W}/clean/newspaper.png'; a = np.array(Image.open(p).convert('RGBA'))
+    dark = (a[110:160, 1040:1110, :3].astype(int).sum(2) < 400)
+    lines = [110 + i for i, f in enumerate(dark.mean(1)) if f > 0.6]
+    top = max(l for l in lines if l < 135); bot = min(l for l in lines if l > 135)
+    cols = np.where((a[top + 2:bot - 1, 1020:1130, :3].astype(int).sum(2) < 380).any(0))[0] + 1020
+    x0 = cols[cols > 1035].min() - 2; x1 = cols.max() + 3
+    patch = a[top + 2:bot - 1, x0 - 22:x0 - 2].copy()
+    for x in range(x0, x1, 20):
+        w = min(20, x1 - x); a[top + 2:bot - 1, x:x + w] = patch[:, :w]
+    Image.fromarray(a).save(p); print('newspaper: цена убрана')
+
+# Карточка Тимура: между кудрями просвечивает белая стена. Светлые пиксели в узкой полосе у края волос делаем прозрачными.
+if 'card-timur' in names:
+    from PIL import Image, ImageFilter
+    import numpy as np
+    p = f'{W}/clean/card-timur.png'; img = Image.open(p).convert('RGBA'); a = np.array(img).astype(int)
+    al = a[..., 3]; ys = np.where(al.max(1) > 128)[0]; top, h = ys.min(), ys.max() - ys.min()
+    mask = Image.fromarray(((al > 20) * 255).astype('uint8'))
+    inner = np.array(mask.filter(ImageFilter.MinFilter(25))) > 0          # всё, что глубже ~12 px от края
+    band = (al > 20) & ~inner
+    zone = np.zeros_like(band); zone[top:top + int(h * .1)] = True       # только верх головы
+    lum = a[..., :3].mean(2)
+    kill = band & zone & (lum > 110)
+    a[..., 3][kill] = 0
+    Image.fromarray(a.astype('uint8')).save(p); print('card-timur: убрано светлых пикселей у края', int(kill.sum()))

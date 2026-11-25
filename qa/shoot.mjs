@@ -4,7 +4,7 @@ const widths = (process.argv[3] || '1440,834,390').split(',').map(Number);
 const out = new URL('./shots/', import.meta.url).pathname;
 const browser = await chromium.launch({ channel: 'chrome', args: ['--mute-audio'] });
 const report = [];
-for (const path of ['en/', 'en/lesson/', 'tr/', 'tr/lesson/']) {
+for (const path of ['en/', 'tr/']) {
   for (const w of widths) {
     const page = await browser.newPage({ viewport: { width: w, height: w > 800 ? 900 : 844 }, deviceScaleFactor: 1 });
     const errors = [];

@@ -1,5 +1,5 @@
 """Собирает страницы из content.en.json и content.tr.json одной командой.
-Пишет gh/en/, gh/en/lesson/, gh/tr/, gh/tr/lesson/ и перенаправления gh/index.html, gh/lesson/index.html.
+Пишет gh/en/ и gh/tr/ (обе с рекламой) и перенаправления: gh/index.html → en/, gh/lesson/ → en/, gh/en/lesson/ → en/, gh/tr/lesson/ → tr/.
 Запуск: python3 tools/build.py
 """
 import json, os, html
@@ -48,8 +48,10 @@ for lang in ('en', 'tr'):
     blob = json.dumps(data, ensure_ascii=False).replace('</', '<\\/')
     meta = data['meta']
     other = '../tr/' if lang == 'en' else '../en/'
-    for version, sub, base in (('ad', '', '../'), ('lesson', 'lesson/', '../../')):
+    for version, sub, base in (('ad', '', '../'),):
         write(os.path.join(GH, lang, sub, 'index.html'), PAGE.format(version=version, base=base, title=html.escape(meta['title']), desc=html.escape(meta['description']), icon=ICON, other=(base + other[3:]), data=blob))
 write(os.path.join(GH, 'index.html'), REDIRECT.format(to='en/', to_js='"en/"'))
-write(os.path.join(GH, 'lesson', 'index.html'), REDIRECT.format(to='../en/lesson/', to_js='"../en/lesson/"'))
-print('ok: en, en/lesson, tr, tr/lesson, redirects')
+write(os.path.join(GH, 'lesson', 'index.html'), REDIRECT.format(to='../en/', to_js='"../en/"'))
+for lang in ('en', 'tr'):
+    write(os.path.join(GH, lang, 'lesson', 'index.html'), REDIRECT.format(to='../', to_js='"../"'))
+print('ok: en, tr, redirects (/, /lesson/, /en/lesson/, /tr/lesson/)')
