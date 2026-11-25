@@ -176,7 +176,7 @@
   R.speakers = function (b) {
     return '<section class="wide embed speakers">' +
       '<h2 class="blur-h" data-reveal>' + b.heading.join('<br>') + '</h2>' +
-      '<div class="speakers__grid">' + b.items.map(function (s) {
+      '<div class="speakers__grid" style="--n:' + b.items.length + '">' + b.items.map(function (s) {
         return a(s.href, 'spk' + (s.dark ? ' spk--dark' : ''), '<div class="spk__ph"><canvas data-matrix="#2fd39e"></canvas>' + img(s.img, s.name[0]) + '</div>' +
           '<h3>' + s.name.map(esc).join('<br>') + '</h3><div class="spk__role">' + esc(s.role) + '</div>' +
           '<div class="spk__txt">' + icon('arrow') + '<span>' + s.text + '</span></div>');
@@ -231,6 +231,22 @@
       '<div class="tickets">' + tk + '</div></div></section>';
   };
 
+  R.quiz = function (b) {
+    var col = b.color === 'pink' ? 'var(--pink)' : 'var(--green)';
+    return '<section class="wide embed quiz" id="' + b.id + '" style="--c:' + col + '" aria-label="Мини-тест">' +
+      '<h2 class="quiz__h" data-reveal>' + b.heading.map(esc).join('<br>') + '</h2><p class="quiz__sub">' + esc(b.sub) + '</p>' +
+      '<div class="quiz__grid"><ol class="quiz__qs">' + b.questions.map(function (q, i) {
+        return '<li class="quiz__q" data-key="' + q.key + '"><div class="quiz__num">0' + (i + 1) + '</div><div><h3>' + esc(q.q) + '</h3><div class="quiz__opts" role="group" aria-label="' + esc(q.q) + '">' +
+          q.options.map(function (o) { return '<button type="button" class="quiz__opt" data-v="' + o.v + '" aria-pressed="false">' + esc(o.t) + '</button>'; }).join('') + '</div></div></li>';
+      }).join('') + '</ol>' +
+      '<div class="quiz__res" aria-live="polite"><div class="quiz__ticket"><div class="quiz__main"><div class="quiz__rt">' + esc(b.resultTitle) + '</div>' +
+      '<div class="quiz__level" data-out="title">?</div><p class="quiz__wait" data-out="wait">Ответь на ' + b.questions.length + ' вопроса, и здесь появится твой старт</p>' +
+      '<p data-out="level"></p><p data-out="goal"></p><p data-out="time"></p>' +
+      '<div class="quiz__acts">' + a(b.href, 'quiz__cta', icon('cart') + '<span>' + esc(b.cta) + '</span>') + '<button type="button" class="quiz__again">' + icon('refresh') + esc(b.again) + '</button></div></div>' +
+      '<div class="quiz__stub">' + barcodeSvg(9) + '</div></div></div></div>' +
+      '<script type="application/json" class="quiz__data">' + JSON.stringify(b.results).replace(/</g, '\\u003c') + '</script></section>';
+  };
+
   R.continued = function (b) {
     return '<section class="cont" aria-label="Продолжение следует">' + tabs() +
       '<div class="wrap cont__stage">' + img(b.bg, 'Такси ночью на заснеженной улице', 'cont__bg') +
@@ -254,6 +270,29 @@
   document.title = C.meta.title;
   var html = visible.map(function (b) { return R[b.type] ? R[b.type](b) : ''; }).join('');
   document.getElementById('app').innerHTML = '<main>' + html + '</main>';
+
+  /* Мини-тест */
+  Array.prototype.forEach.call(document.querySelectorAll('.quiz'), function (box) {
+    var res = JSON.parse(box.querySelector('.quiz__data').textContent), ans = {}, qs = box.querySelectorAll('.quiz__q');
+    function out(k, v) { var el = box.querySelector('[data-out="' + k + '"]'); if (el) el.textContent = v || ''; }
+    function update() {
+      var done = Object.keys(ans).length === qs.length;
+      box.classList.toggle('is-done', done);
+      if (!done) { out('title', '?'); out('level'); out('goal'); out('time'); out('wait', box.querySelector('.quiz__wait').getAttribute('data-text') || box.querySelector('.quiz__wait').textContent); return; }
+      var L = res.level[ans.level] || {};
+      out('title', L.title); out('level', L.text); out('goal', res.goal[ans.goal]); out('time', res.time[ans.time]); out('wait', '');
+    }
+    box.querySelector('.quiz__wait').setAttribute('data-text', box.querySelector('.quiz__wait').textContent);
+    Array.prototype.forEach.call(qs, function (q) {
+      Array.prototype.forEach.call(q.querySelectorAll('.quiz__opt'), function (btn) {
+        btn.addEventListener('click', function () {
+          Array.prototype.forEach.call(q.querySelectorAll('.quiz__opt'), function (o) { o.setAttribute('aria-pressed', 'false'); });
+          btn.setAttribute('aria-pressed', 'true'); ans[q.getAttribute('data-key')] = btn.getAttribute('data-v'); update();
+        });
+      });
+    });
+    box.querySelector('.quiz__again').addEventListener('click', function () { ans = {}; Array.prototype.forEach.call(box.querySelectorAll('.quiz__opt'), function (o) { o.setAttribute('aria-pressed', 'false'); }); update(); });
+  });
 
   /* QR-коды */
   function drawQR(el) {

@@ -4,7 +4,7 @@ const widths = (process.argv[3] || '1440,834,390').split(',').map(Number);
 const out = new URL('./shots/', import.meta.url).pathname;
 const browser = await chromium.launch({ channel: 'chrome', args: ['--mute-audio'] });
 const report = [];
-for (const path of ['', 'lesson/']) {
+for (const path of ['en/', 'en/lesson/', 'tr/', 'tr/lesson/']) {
   for (const w of widths) {
     const page = await browser.newPage({ viewport: { width: w, height: w > 800 ? 900 : 844 }, deviceScaleFactor: 1 });
     const errors = [];
@@ -26,12 +26,15 @@ for (const path of ['', 'lesson/']) {
       lava: [...document.querySelectorAll('a[href*="lava.top"]')].map(a => a.href).length,
       lavaSet: [...new Set([...document.querySelectorAll('a[href*="lava.top"]')].map(a => a.href))],
     }));
-    const name = (path ? 'lesson' : 'main') + '-' + w;
+    let quiz = null;
+    if (await page.$('.quiz')) { for (const q of await page.$$('.quiz__q')) { const o = await q.$$('.quiz__opt'); await o[1].click(); }
+      quiz = await page.evaluate(() => ({ done: document.querySelector('.quiz').classList.contains('is-done'), level: document.querySelector('[data-out=title]').textContent, cta: document.querySelector('.quiz__cta').href.slice(-12) })); }
+    const name = path.split('/').filter(Boolean).join('-') + '-' + w;
     await page.screenshot({ path: out + name + '-full.png', fullPage: true });
     await page.screenshot({ path: out + name + '-first.png' });
     const ad = await page.$('.search');
     if (ad) { await ad.scrollIntoViewIfNeeded(); await page.waitForTimeout(300); await page.screenshot({ path: out + name + '-ad.png' }); }
-    report.push({ page: name, width: w, scrollWidth: r.sw, ok: r.sw === w, height: r.h, imgs: r.imgs, hiddenImgs: r.hidden, broken: r.broken, lavaLinks: r.lava, lavaSet: r.lavaSet, errors });
+    report.push({ quiz, page: name, width: w, scrollWidth: r.sw, ok: r.sw === w, height: r.h, imgs: r.imgs, hiddenImgs: r.hidden, broken: r.broken, lavaLinks: r.lava, lavaSet: r.lavaSet, errors });
     await page.close();
   }
 }

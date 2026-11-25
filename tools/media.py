@@ -112,6 +112,9 @@ def save_alpha(src, name, maxw=900, gray=False, dark=None, top=None):
 
 
 save_alpha(C % 'newspaper', 'newspaper', 900)
+save_alpha(C % 'timur_hero', 'timur-hero', 700)
+save_alpha(C % 'dias_peek1', 'dias-peek-left', 600)
+save_alpha(C % 'dias_peek2', 'dias-peek-right', 600)
 save_alpha(C % 'dias_hero', 'dias-hero', 700)
 save_alpha(C % 'timur_peek1', 'timur-peek-left', 600)
 save_alpha(C % 'timur_peek2', 'timur-peek-right', 600)
