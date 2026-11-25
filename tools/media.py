@@ -89,52 +89,40 @@ G = os.path.join(W, 'gen', '%s.png')
 for g, name, q in [('hero-bg', 'hero-bg', 72), ('house', 'house-night', 72), ('mantel', 'mantel', 72), ('taxi', 'taxi-night', 72), ('pill', 'pill', 78), ('laptop', 'laptop', 78)]:
     save(Image.open(G % g).convert('RGB'), name, q=q)
 
-# ---------- Вырезки без каймы (work/clean) ----------
+# ---------- Предметы: вырезки без каймы (work/clean, см. tools/cutouts.py) ----------
 C = os.path.join(W, 'clean', '%s.png')
-ns = {'__file__': os.path.join(ROOT, 'tools', 'cutouts.py')}
-exec(open(ns['__file__']).read().split('os.makedirs(W')[0], ns)
-SRCS = ns['SRC']
 
 
-def save_alpha(src, name, maxw=900, gray=False, dark=None, top=None):
+def save_alpha(src, name, maxw=900):
     im = Image.open(C % src).convert('RGBA')
-    if top:
-        im = im.crop((0, 0, im.width, round(im.height * top)))
-    if gray:
-        a = im.getchannel('A'); im = bw(im.convert('RGB')).convert('RGBA'); im.putalpha(a)
-    if dark is not None:
-        a = im.getchannel('A'); im = Image.new('RGBA', im.size, dark + (255,)); im.putalpha(a)
     if im.width > maxw:
         im = im.resize((maxw, round(im.height * maxw / im.width)), Image.LANCZOS)
     im.save(os.path.join(OUT, name + '.webp'), 'WEBP', quality=80, alpha_quality=90, method=6)
-    if src in SRCS and SRCS[src][1] in ('Диас', 'Тимур'):
-        PEOPLE.append((name + '.webp', src_name(SRCS[src][0]), SRCS[src][1]))
 
 
 save_alpha('newspaper', 'newspaper', 900)
 save_alpha('passport', 'passport', 300)
 save_alpha('boarding-pass', 'boarding-pass', 420)
 save_alpha('airplane', 'airplane', 520)
-# Диас (/en/)
-save_alpha('dias-hero', 'dias-hero', 700)
-save_alpha('en-peek-left', 'en-peek-left', 600)
-save_alpha('en-peek-right', 'en-peek-right', 600)
-save_alpha('en-peek-footer', 'en-peek-footer', 600)
-save_alpha('speaker-dias', 'speaker-dias', 520, top=.5)
-save_alpha('card-dias', 'card-dias', 560, gray=True)
-save_alpha('en-sil-a', 'en-silhouette', 420, dark=(8, 8, 8))
-save_alpha('en-sil-b', 'en-silhouette-2', 420, dark=(8, 8, 8))
-save_alpha('en-sil-a', 'en-speaker-you', 520, dark=(6, 40, 30), top=.45)
-# Тимур (/tr/)
-save_alpha('timur-hero', 'timur-hero', 700)
-save_alpha('tr-peek-left', 'tr-peek-left', 600)
-save_alpha('tr-peek-right', 'tr-peek-right', 600)
-save_alpha('tr-peek-footer', 'tr-peek-footer', 600)
-save_alpha('speaker-timur', 'speaker-timur', 520, top=.42)
-save_alpha('card-timur', 'card-timur', 560, gray=True)
-save_alpha('tr-sil-a', 'tr-silhouette', 520, dark=(8, 8, 8))
-save_alpha('tr-sil-b', 'tr-silhouette-2', 420, dark=(8, 8, 8))
-save_alpha('tr-sil-b', 'tr-speaker-you', 520, dark=(6, 40, 30), top=.45)
+
+# ---------- Люди: только целые фото со своим фоном (без вырезки и масок) ----------
+WHOLE = {
+    'en': {'hero': DIASW % '1690', 'peek-left': DIASW % '5176', 'peek-right': DIASW % '9347', 'footer': DIASW % '2077', 'speaker': DIASW % '6013',
+           'you': DIASW % '2535', 'card': DIASW % '9210', 'browser': DIASW % '4033', 'ticket': DIASW % '3112'},
+    'tr': {'hero': FR % 't_2854_4', 'peek-left': FR % 't_2853_8', 'peek-right': FR % 't_2854_8', 'footer': FR % 't_2853_11', 'speaker': FR % 'tp_2856',
+           'you': FR % 't_2810_5', 'card': FR % 'tp_2850', 'browser': FR % 't_2853_3', 'ticket': FR % 't_2809_3'},
+}
+for v, slots in WHOLE.items():
+    for slot, src in slots.items():
+        im = ImageOps.exif_transpose(Image.open(src)).convert('RGB')
+        # кадр 9:16 из видео: до 3:4, снизу оставляем всё, убираем пустую стену над головой
+        if im.height / im.width > 1.5:
+            h = round(im.width * 4 / 3); top = im.height - h if slot not in ('you', 'ticket') else (im.height - h) // 2
+            im = im.crop((0, top, im.width, top + h))
+        if im.height > 1000:
+            im = im.resize((round(im.width * 1000 / im.height), 1000), Image.LANCZOS)
+        save(im, f'{v}-photo-{slot}', q=78)
+        PEOPLE.append((f'{v}-photo-{slot}.webp', src_name(src), WHO[v]))
 
 # ---------- Скриншоты платформ ----------
 SHOTS = {'d-hub': DSH1 % 'n-a2-hub-desktop-hero', 'd-lexika': DSH3 % 'n-lexika', 'd-gemini': DSH1 % 'n-a0-gemini-desktop-hero', 'd-roadmap-m': DSH3 % 'n-m-roadmap',
@@ -146,7 +134,7 @@ for name, src in SHOTS.items():
 
 # ---------- Список людей и размеры ----------
 with open(os.path.join(OUT, 'PEOPLE.md'), 'w') as fh:
-    fh.write('# Люди на картинках сайта 04\n\nНа /en/ только Диас (файлы en-*, dias-*, speaker-dias, card-dias), на /tr/ только Тимур (tr-*, timur-*, speaker-timur, card-timur).\n\n| Файл на сайте | Исходный файл | Кто |\n|---|---|---|\n')
+    fh.write('# Люди на картинках сайта 04\n\nНа /en/ только Диас (файлы en-*), на /tr/ только Тимур (файлы tr-*). Людей не вырезаем: все фото целые, со своим фоном.\n\n| Файл на сайте | Исходный файл | Кто |\n|---|---|---|\n')
     for f, s, who in PEOPLE:
         fh.write(f'| {f} | {s} | {who} |\n')
 sizes = {}

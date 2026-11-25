@@ -130,13 +130,15 @@
    ],
    "media": {
     "bg": "hero-bg",
-    "person": "dias-hero",
+    "person": "en-photo-hero",
     "newspaper": "newspaper",
-    "peekLeft": "en-peek-left",
-    "peekRight": "en-peek-right",
+    "peekLeft": "en-photo-peek-left",
+    "peekRight": "en-photo-peek-right",
     "objTop": "passport",
     "objBottom": "boarding-pass",
-    "personAlt": "Диас выглядывает из-за газеты"
+    "personAlt": "Диас у Колизея",
+    "peekLeftAlt": "Диас со стаканом кофе",
+    "peekRightAlt": "Диас у Акрополя"
    }
   },
   {
@@ -293,18 +295,7 @@
    "type": "scene",
    "img": "house-night",
    "alt": "Кирпичный дом ночью в гирляндах, снег и луна",
-   "figures": [
-    {
-     "img": "en-silhouette",
-     "x": 48,
-     "w": 13
-    },
-    {
-     "img": "en-silhouette-2",
-     "x": 60,
-     "w": 10
-    }
-   ],
+   "figures": [],
    "bubbles": [
     {
      "lang": "en",
@@ -470,7 +461,8 @@
     "text": "ПРОЙТИ<br>МИНИ-ТЕСТ",
     "href": "#quiz"
    },
-   "silhouette": "en-silhouette"
+   "photo": "en-photo-browser",
+   "photoAlt": "Диас в Венеции"
   },
   {
    "type": "paths",
@@ -610,17 +602,18 @@
    ],
    "items": [
     {
-     "img": "speaker-dias",
+     "img": "en-photo-speaker",
      "name": [
       "ДИАС",
       "АВТОР"
      ],
      "role": "DIAS ENGLISH",
      "text": "Вырос в Казыгурте,<br><b>учится в Sapienza</b> в Риме",
-     "href": "buy"
+     "href": "buy",
+     "alt": "Диас в Колизее"
     },
     {
-     "img": "en-speaker-you",
+     "img": "en-photo-you",
      "name": [
       "ТЫ",
       "В ДОРОГЕ"
@@ -628,7 +621,8 @@
      "role": "ГЛАВНЫЙ ГЕРОЙ",
      "text": "Учил годами и молчишь.<br><b>Нужен понятный план</b>",
      "href": "#quiz",
-     "dark": true
+     "dark": true,
+     "alt": "Диас смотрит на Эйфелеву башню"
     }
    ]
   },
@@ -755,7 +749,7 @@
    "cards": [
     {
      "color": "pink",
-     "photo": "card-dias",
+     "photo": "en-photo-card",
      "tag": [
       "Диас",
       "Dias English, от A0 до C1"
@@ -777,7 +771,8 @@
      ],
      "href": "buy",
      "cta": "Купить за 30 €",
-     "plane": "airplane"
+     "plane": "airplane",
+     "photoAlt": "Диас у моря"
     }
    ],
    "box": {
@@ -808,7 +803,8 @@
      "price": "30 €",
      "when": "НАВСЕГДА",
      "href": "buy",
-     "silhouette": "en-silhouette"
+     "photo": "en-photo-ticket",
+     "photoAlt": "Диас у моря на закате"
     },
     {
      "color": "black",
@@ -869,8 +865,9 @@
     "ЗА НОВЫМИ СЕРИЯМИ"
    ],
    "text": "И подписывайся, если хочешь <b>следующие серии</b> раньше всех: такси, аптека, рынок и ещё <em>девять ситуаций в дороге</em>",
-   "peek": "en-peek-footer",
-   "bg": "hero-bg"
+   "peek": "en-photo-footer",
+   "bg": "hero-bg",
+   "peekAlt": "Диас на улице с пакетами"
   }
  ],
  "_readme": "Контент вариации EN. Все тексты, ссылки, картинки и порядок блоков. ad: true значит блок только на главной, на lesson/ его нет. Пересборка: python3 tools/build.py",

@@ -131,13 +131,15 @@
    ],
    "media": {
     "bg": "hero-bg",
-    "person": "timur-hero",
+    "person": "tr-photo-hero",
     "newspaper": "newspaper",
-    "peekLeft": "tr-peek-left",
-    "peekRight": "tr-peek-right",
+    "peekLeft": "tr-photo-peek-left",
+    "peekRight": "tr-photo-peek-right",
     "objTop": "passport",
     "objBottom": "boarding-pass",
-    "personAlt": "Тимур выглядывает из-за газеты"
+    "personAlt": "Тимур у белой стены",
+    "peekLeftAlt": "Тимур у белой стены",
+    "peekRightAlt": "Тимур у стены с ноутбуком"
    }
   },
   {
@@ -294,18 +296,7 @@
    "type": "scene",
    "img": "house-night",
    "alt": "Кирпичный дом ночью в гирляндах, снег и луна",
-   "figures": [
-    {
-     "img": "tr-silhouette",
-     "x": 48,
-     "w": 13
-    },
-    {
-     "img": "tr-silhouette-2",
-     "x": 60,
-     "w": 10
-    }
-   ],
+   "figures": [],
    "bubbles": [
     {
      "lang": "en",
@@ -471,7 +462,8 @@
     "text": "ПРОЙТИ<br>МИНИ-ТЕСТ",
     "href": "#quiz"
    },
-   "silhouette": "tr-silhouette"
+   "photo": "tr-photo-browser",
+   "photoAlt": "Тимур в профиль у стены"
   },
   {
    "type": "paths",
@@ -611,17 +603,18 @@
    ],
    "items": [
     {
-     "img": "speaker-timur",
+     "img": "tr-photo-speaker",
      "name": [
       "ТИМУР",
       "АВТОР"
      ],
      "role": "ALTERNA TIMUR",
      "text": "Разбирает турецкий<br><b>как на канале</b>, от A0 до C1",
-     "href": "buy"
+     "href": "buy",
+     "alt": "Тимур в зелёном поло"
     },
     {
-     "img": "tr-speaker-you",
+     "img": "tr-photo-you",
      "name": [
       "ТЫ",
       "В ДОРОГЕ"
@@ -629,7 +622,8 @@
      "role": "ГЛАВНЫЙ ГЕРОЙ",
      "text": "В отпуске объясняешься<br><b>жестами и картинками</b>",
      "href": "#quiz",
-     "dark": true
+     "dark": true,
+     "alt": "Тимур занимается на планшете, вид через плечо"
     }
    ]
   },
@@ -758,7 +752,7 @@
    "cards": [
     {
      "color": "green",
-     "photo": "card-timur",
+     "photo": "tr-photo-card",
      "tag": [
       "Тимур",
       "Alterna, от A0 до C1"
@@ -780,7 +774,8 @@
      ],
      "href": "buy",
      "cta": "Купить за 30 €",
-     "plane": "airplane"
+     "plane": "airplane",
+     "photoAlt": "Тимур в зелёном поло у стены"
     }
    ],
    "box": {
@@ -811,7 +806,8 @@
      "price": "30 €",
      "when": "НАВСЕГДА",
      "href": "buy",
-     "silhouette": "tr-silhouette"
+     "photo": "tr-photo-ticket",
+     "photoAlt": "Тимур с планшетом"
     },
     {
      "color": "black",
@@ -872,8 +868,9 @@
     "ЗА НОВЫМИ СЕРИЯМИ"
    ],
    "text": "И подписывайся, если хочешь <b>следующие серии</b> раньше всех: такси, аптека, рынок и ещё <em>девять ситуаций в дороге</em>",
-   "peek": "tr-peek-footer",
-   "bg": "hero-bg"
+   "peek": "tr-photo-footer",
+   "bg": "hero-bg",
+   "peekAlt": "Тимур у белой стены"
   }
  ],
  "_readme": "Контент вариации TR. Все тексты, ссылки, картинки и порядок блоков. ad: true значит блок только на главной, на lesson/ его нет. Пересборка: python3 tools/build.py",
