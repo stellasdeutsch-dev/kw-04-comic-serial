@@ -3,7 +3,7 @@ import { chromium } from '/Users/shyngysnarseyit/Downloads/alterna/pdf-guides/no
 import { writeFileSync, mkdirSync } from 'fs';
 const out = new URL('./figma/', import.meta.url).pathname; mkdirSync(out, { recursive: true });
 const b = await chromium.launch({ channel: 'chrome', args: ['--mute-audio'] });
-for (const [page, path] of [['main', ''], ['lesson', 'lesson/']]) for (const w of [1440, 834, 390]) {
+for (const [page, path] of [['en', 'en/'], ['en-lesson', 'en/lesson/'], ['tr', 'tr/'], ['tr-lesson', 'tr/lesson/']]) for (const w of [1440, 834, 390]) {
   const p = await b.newPage({ viewport: { width: w, height: 900 } });
   await p.goto('http://localhost:8704/' + path, { waitUntil: 'networkidle' });
   await p.addStyleTag({ content: '#snow{display:none!important} *{animation:none!important;transition:none!important} [data-reveal]{opacity:1!important;transform:none!important}' });
@@ -12,7 +12,7 @@ for (const [page, path] of [['main', ''], ['lesson', 'lesson/']]) for (const w o
   await p.evaluate(() => scrollTo(0, 0)); await p.waitForTimeout(500);
   const data = await p.evaluate(() => {
     const NAMES = [['.hero', 'Первый экран'], ['main > nav.tabs', 'Вкладки серий'], ['#ep1', 'Комикс · Аэропорт'], ['#ep2', 'Комикс · Отель'], ['.scene', 'Сцена · дом ночью'], ['#ep3', 'Комикс · Кафе'],
-      ['.search', 'Реклама платформы · поиск'], ['.browser', 'Реклама платформы · вложенный лендинг'], ['.paths', 'Реклама платформы · два пути'], ['.speakers', 'Реклама платформы · авторы'],
+      ['.search', 'Реклама платформы · поиск'], ['.browser', 'Реклама платформы · вложенный лендинг'], ['.paths', 'Реклама платформы · два пути'], ['#quiz', 'Реклама платформы · мини-тест'], ['.speakers', 'Реклама платформы · авторы'],
       ['#inside-dias', 'Реклама платформы · внутри Dias English'], ['#inside-timur', 'Реклама платформы · внутри Alterna Timur'], ['.frame', 'Реклама платформы · всё в одном месте'], ['#offers', 'Реклама платформы · цены'],
       ['.cont', 'Продолжение следует'], ['.foot', 'Подвал']];
     const sy = window.scrollY;

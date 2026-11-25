@@ -38,9 +38,9 @@ def compact(path):
                 N.append(['t', g, n['text'], base[4], base[1], round(base[2], 1), base[3], round(n['lh'], 1), round(n['ls'], 2), n['al'], base[0], 1 if n.get('nowrap') else 0, segs or 0, n.get('tag')])
         secs.append([S['name'], S['x'], S['y'], S['w'], S['h'], hx(S.get('bg')) or 0, N])
     return {'w': d['width'], 'h': d['height'], 's': secs}
-res = {w: compact(f'qa/figma/main-{w}.json') for w in (1440, 834, 390)}
+res = {f'{v}-{w}': compact(f'qa/figma/{v}-{w}.json') for v in ('en', 'tr') for w in (1440, 834, 390)}
 json.dump(icons, open('qa/figma/icons.json', 'w'), ensure_ascii=False, separators=(',', ':'))
 for w, r in res.items():
-    json.dump(r, open(f'qa/figma/c-main-{w}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
+    json.dump(r, open(f'qa/figma/c-{w}.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     print(w, len(json.dumps(r, ensure_ascii=False, separators=(',', ':'))), [ (s[0][:18], len(json.dumps(s, ensure_ascii=False, separators=(',', ':')))) for s in r['s']])
 print('icons', len(icons), len(json.dumps(icons)))
