@@ -93,7 +93,7 @@
       '<div class="hero__vis">' +
         qr('hero__qr', C.links.social.label) +
         '<a class="hero__handle" href="' + esc(C.links.social.url) + '" target="_blank" rel="noopener">' + icon('insta') + esc(C.links.social.label) + '</a>' +
-        img(m.peekLeft, '', 'hero__peek hero__peek--l', true) + img(m.peekRight, '', 'hero__peek hero__peek--r', true) +
+        img(m.peekLeft, m.peekLeftAlt || '', 'hero__peek hero__peek--l', true) + img(m.peekRight, m.peekRightAlt || '', 'hero__peek hero__peek--r', true) +
         img(m.person, m.personAlt || '', 'hero__person', true) +
         '<svg class="hero__heart" viewBox="0 0 40 44" aria-hidden="true"><path d="M6 0h28a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6H24l-4 8-4-8H6a6 6 0 0 1-6-6V6a6 6 0 0 1 6-6z" fill="#ef3b45"/><path d="M14.5 26.5l-5-5a4 4 0 0 1 5.6-5.6l.9.9.9-.9a4 4 0 0 1 5.6 5.6z" fill="#fff" transform="translate(-1 -3)"/><text x="29" y="24" font-family="Inter,sans-serif" font-weight="600" font-size="13" fill="#fff" text-anchor="middle">1</text></svg>' +
         img(m.objTop, '', 'hero__obj-top', true) +
@@ -153,7 +153,7 @@
         '<div class="bhero__strip bhero__strip--l">' + img(b.left.img, '') + '</div>' +
         '<div class="bhero__strip bhero__strip--r">' + img(b.right.img, '') + '</div>' +
         '<div class="bhero__split"><div class="r"><canvas class="matrix" data-matrix="#ff6b78"></canvas></div><div class="g"><canvas class="matrix" data-matrix="#6dffc4"></canvas></div></div>' +
-        img(b.silhouette, '', 'bhero__sil') +
+        (b.photo ? img(b.photo, b.photoAlt || '', 'bhero__photo') : '') +
         vcard('l', b.left) + vcard('r', b.right) +
         '<div class="bhero__lbl bhero__lbl--l">' + icon('arrow') + '<span>' + b.labelLeft + '</span></div>' +
         '<div class="bhero__lbl bhero__lbl--r"><span>' + b.labelRight + '</span></div>' +
@@ -177,7 +177,7 @@
     return '<section class="wide embed speakers">' +
       '<h2 class="blur-h" data-reveal>' + b.heading.join('<br>') + '</h2>' +
       '<div class="speakers__grid" style="--n:' + b.items.length + '">' + b.items.map(function (s) {
-        return a(s.href, 'spk' + (s.dark ? ' spk--dark' : ''), '<div class="spk__ph"><canvas data-matrix="#2fd39e"></canvas>' + img(s.img, s.name[0]) + '</div>' +
+        return a(s.href, 'spk' + (s.dark ? ' spk--dark' : ''), '<div class="spk__ph">' + img(s.img, s.alt || s.name[0]) + '</div>' +
           '<h3>' + s.name.map(esc).join('<br>') + '</h3><div class="spk__role">' + esc(s.role) + '</div>' +
           '<div class="spk__txt">' + icon('arrow') + '<span>' + s.text + '</span></div>');
       }).join('') + '</div></section>';
@@ -211,7 +211,7 @@
 
   R.offers = function (b) {
     var cards = b.cards.map(function (c) {
-      return a(c.href, 'ocard ocard--' + c.color, '<div class="ocard__in"><div class="ocard__photo">' + (c.plane ? img(c.plane, '', 'ocard__plane') : '') + img(c.photo, c.tag[0], 'ocard__person') +
+      return a(c.href, 'ocard ocard--' + c.color, '<div class="ocard__in"><div class="ocard__photo">' + (c.plane ? img(c.plane, '', 'ocard__plane') : '') + img(c.photo, c.photoAlt || c.tag[0], 'ocard__person') +
         '<div class="ocard__tag"><b>' + esc(c.tag[0]) + '</b><span>' + esc(c.tag[1]) + '</span></div></div>' +
         '<div class="ocard__body"><div class="ocard__kicker">' + esc(c.kicker) + '</div>' +
         '<h3 class="ocard__big"><span>' + esc(c.big1) + '</span><span>' + esc(c.big2) + '</span><em>' + esc(c.script) + '</em></h3>' +
@@ -223,7 +223,7 @@
     var tk = b.tickets.map(function (t) {
       return a(t.href, 'ticket ticket--' + t.color, '<div class="ticket__main"><div class="ticket__name"><span>' + esc(t.name[0]) + ' <i>' + esc(t.tariff) + '</i></span><span>' + esc(t.name[1]) + '</span></div>' +
         '<div class="ticket__lines">' + t.lines + '</div><div class="ticket__foot"><span>' + esc(t.price) + '</span><span>' + esc(t.when) + '</span></div>' +
-        (t.silhouette ? img(t.silhouette, '', 'ticket__sil') : '') + '</div><div class="ticket__stub">' + barcodeSvg(t.color === 'green' ? 3 : 5) + '</div>', 'Купить ' + t.name.join(' '));
+        (t.photo ? img(t.photo, t.photoAlt || '', 'ticket__photo') : '') + '</div><div class="ticket__stub">' + barcodeSvg(t.color === 'green' ? 3 : 5) + '</div>', 'Купить ' + t.name.join(' '));
     }).join('');
     return '<section class="offers wrap" id="' + b.id + '">' + cards +
       '<div class="obox" data-reveal><div><h3>' + b.box.title.map(esc).join('<br>') + '</h3><ul>' +
@@ -260,7 +260,7 @@
 
   R.footer = function (b) {
     return '<footer class="foot"><div class="tapes" aria-hidden="true"><div class="ticker tape tape--b">' + tickerTrack(b.ticker) + '</div><div class="ticker tape tape--a">' + tickerTrack(b.ticker) + '</div></div>' +
-      '<div class="foot__body">' + img(b.bg, '', 'foot__bg') + img(b.peek, '', 'foot__peek') +
+      '<div class="foot__body">' + img(b.bg, '', 'foot__bg') + img(b.peek, b.peekAlt || '', 'foot__peek') +
       '<div class="wrap"><div class="foot__grid">' + qr('foot__qr', C.links.social.label) +
       '<div><h2 class="foot__title">' + b.title.map(esc).join('<br>') + '</h2><p class="foot__text">' + b.text + '</p></div></div>' +
       episodes() + '</div></div></footer>';

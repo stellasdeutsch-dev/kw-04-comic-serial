@@ -1,6 +1,6 @@
 # Люди на картинках сайта 04
 
-На /en/ только Диас (файлы en-*, dias-*, speaker-dias, card-dias), на /tr/ только Тимур (tr-*, timur-*, speaker-timur, card-timur).
+На /en/ только Диас (файлы en-*), на /tr/ только Тимур (файлы tr-*). Людей не вырезаем: все фото целые, со своим фоном.
 
 | Файл на сайте | Исходный файл | Кто |
 |---|---|---|
@@ -72,21 +72,21 @@
 | en-strip-right.webp | ~/dias/shared/dias-photos-web/dias-IMG_2748.webp | Диас |
 | tr-strip-left.webp | ~/dias/timur-video/IMG_2801.MOV, кадр на 5 с | Тимур |
 | tr-strip-right.webp | ~/dias/timur-video/IMG_2800.MOV, кадр на 4 с | Тимур |
-| dias-hero.webp | ~/dias/dias photos/IMG_2054.HEIC | Диас |
-| en-peek-left.webp | ~/dias/dias photos/IMG_8898 (3).HEIC | Диас |
-| en-peek-right.webp | ~/dias/dias photos/IMG_2059.HEIC | Диас |
-| en-peek-footer.webp | ~/dias/dias photos/IMG_7362.HEIC | Диас |
-| speaker-dias.webp | ~/dias/dias photos/IMG_1690.HEIC | Диас |
-| card-dias.webp | ~/dias/dias photos/IMG_9206.HEIC | Диас |
-| en-silhouette.webp | ~/dias/dias photos/IMG_2535.HEIC | Диас |
-| en-silhouette-2.webp | ~/dias/dias photos/IMG_9206.HEIC | Диас |
-| en-speaker-you.webp | ~/dias/dias photos/IMG_2535.HEIC | Диас |
-| timur-hero.webp | ~/dias/timur-video/IMG_2800.MOV, кадр на 4 с | Тимур |
-| tr-peek-left.webp | ~/dias/timur-video/IMG_2799.MOV, кадр на 3 с | Тимур |
-| tr-peek-right.webp | ~/dias/timur-video/IMG_2801.MOV, кадр на 11 с | Тимур |
-| tr-peek-footer.webp | ~/dias/timur-video/IMG_2800.MOV, кадр на 12 с | Тимур |
-| speaker-timur.webp | ~/dias/timur-video/IMG_2856.HEIC | Тимур |
-| card-timur.webp | ~/dias/timur-video/IMG_2850.HEIC | Тимур |
-| tr-silhouette.webp | ~/dias/timur-video/IMG_2853.MOV, кадр на 3 с | Тимур |
-| tr-silhouette-2.webp | ~/dias/timur-video/IMG_2853.MOV, кадр на 8 с | Тимур |
-| tr-speaker-you.webp | ~/dias/timur-video/IMG_2853.MOV, кадр на 8 с | Тимур |
+| en-photo-hero.webp | ~/dias/shared/dias-photos-web/dias-IMG_1690.webp | Диас |
+| en-photo-peek-left.webp | ~/dias/shared/dias-photos-web/dias-IMG_5176.webp | Диас |
+| en-photo-peek-right.webp | ~/dias/shared/dias-photos-web/dias-IMG_9347.webp | Диас |
+| en-photo-footer.webp | ~/dias/shared/dias-photos-web/dias-IMG_2077.webp | Диас |
+| en-photo-speaker.webp | ~/dias/shared/dias-photos-web/dias-IMG_6013.webp | Диас |
+| en-photo-you.webp | ~/dias/shared/dias-photos-web/dias-IMG_2535.webp | Диас |
+| en-photo-card.webp | ~/dias/shared/dias-photos-web/dias-IMG_9210.webp | Диас |
+| en-photo-browser.webp | ~/dias/shared/dias-photos-web/dias-IMG_4033.webp | Диас |
+| en-photo-ticket.webp | ~/dias/shared/dias-photos-web/dias-IMG_3112.webp | Диас |
+| tr-photo-hero.webp | ~/dias/timur-video/IMG_2854.MOV, кадр на 4 с | Тимур |
+| tr-photo-peek-left.webp | ~/dias/timur-video/IMG_2853.MOV, кадр на 8 с | Тимур |
+| tr-photo-peek-right.webp | ~/dias/timur-video/IMG_2854.MOV, кадр на 8 с | Тимур |
+| tr-photo-footer.webp | ~/dias/timur-video/IMG_2853.MOV, кадр на 11 с | Тимур |
+| tr-photo-speaker.webp | ~/dias/timur-video/IMG_2856.HEIC | Тимур |
+| tr-photo-you.webp | ~/dias/timur-video/IMG_2810.MOV, кадр на 5 с | Тимур |
+| tr-photo-card.webp | ~/dias/timur-video/IMG_2850.HEIC | Тимур |
+| tr-photo-browser.webp | ~/dias/timur-video/IMG_2853.MOV, кадр на 3 с | Тимур |
+| tr-photo-ticket.webp | ~/dias/timur-video/IMG_2809.MOV, кадр на 3 с | Тимур |
